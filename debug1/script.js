@@ -1,14 +1,14 @@
+let xPos = 0;
+let yPos = 0;
+let xSpeed = 1;
+let ySpeed = 4.5;
+
 function setup() {
     createCanvas(500, 500);
     background(0);
-    nostroke();
+    noStroke();
 
-    let xPos = 0;
-    let yPos = 0;
-    let xSpeed = 1;
-    let ySpeed = 4.5;
-
-
+}
 function draw() {
     background(0, 0, 0, 5);
 
@@ -18,11 +18,10 @@ function draw() {
     xPos += xSpeed;
     yPos += ySpeed;
 
-    if (xPos < 15 || xPos > 485) {
+    if (xPos < 0 || xPos > 485) {
         xSpeed *= -1;
     }
-    if (yPos < 15 || yPos > 485) {
+    if (yPos < 0 || yPos > 485) {
         ySpeed *= -1;
     }
-}
 }

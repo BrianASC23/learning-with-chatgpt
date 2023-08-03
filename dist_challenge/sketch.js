@@ -3,6 +3,11 @@ let xPos1 = 100;
 let yPos1 = 100;
 let xPos2 = 300;
 let yPos2 = 300;
+let r = 0;
+let g = 255;
+let b = 0;
+
+
 
 function setup() {
     createCanvas(400, 400);
@@ -14,7 +19,7 @@ function draw() {
     background(0);
 
     // set circles' color to green
-    fill(0, 255, 0);
+    fill(r, g, b);
 
     // draw circles
     ellipse(xPos1, yPos1, 100, 100);
@@ -27,4 +32,17 @@ function mouseClicked() {
     yPos1 = random(50, 350);
     xPos2 = random(50, 350);
     yPos2 = random(50, 350);
+
+    let distance = dist(xPos1, yPos1, xPos2, yPos2);
+    
+
+    if(distance <= 100){
+        r = 255;
+        g = 0;
+        b = 0;
+    } else if(distance > 100){
+        r = 0;
+        g = 255;
+        b = 0;
+    }
 }

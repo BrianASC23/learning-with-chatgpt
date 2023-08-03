@@ -1,10 +1,10 @@
-let xPos = 220;
+let xPos = 225;
 let yPos = 0;
+let xSpeed = 1;
+let ySpeed = 4;
 
 function setup() {
-    let xSpeed = 1;
-    let ySpeed = 4;
-    createcanvas(500, 500);
+    createCanvas(500, 500);
     background(255);
 }
 
